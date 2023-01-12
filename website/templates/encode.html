@@ -1,0 +1,13 @@
+
+{% extends "base.html" %} {% block title %}Encode{% endblock %}
+
+{% block content %}
+<h1>ENCODE</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+    {{form.file()}}
+    <input name="u" placeholder="Text data">
+    {{form.submit()}}
+</form>
+
+{%endblock%}
